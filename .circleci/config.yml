@@ -13,11 +13,12 @@ jobs:
   build:
     docker:
       - image: postman/newman
-    working_directory: ~/repo
+#    working_directory: ~/repo
     steps:
       - run:
           command: |
             cd ..
+            cd repo
             ls -a
 #            newman run collections/Google\ Places\ API.postman_collection.json
 
