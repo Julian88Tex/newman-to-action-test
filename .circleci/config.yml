@@ -13,6 +13,7 @@ jobs:
   build:
     docker:
       - image: postman/newman
+    working_directory: ~/newman-to-action-test
     steps:
       - run:
           command: |
