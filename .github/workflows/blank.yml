@@ -8,8 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup Docker
-        uses: docker://postman/newman:latest
+      # - name: Setup Docker
+      #   uses: docker://postman/newman:latest
+      - name: docker it
+        run: |
+          docker pull postman/newman
       - name: Run Collection
         run: |
           newman run collections/Google\ Places\ API.postman_collection.json
