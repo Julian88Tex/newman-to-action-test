@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: |
-            npm install -g newman
+            npm install newman
             newman run collections/Google\ Places\ API.postman_collection.json
