@@ -18,5 +18,5 @@ jobs:
       - run:
           command: |
             ls -a
-            newman run collections/Google\ Places\ API.postman_collection.json
+#            newman run collections/Google\ Places\ API.postman_collection.json
 
