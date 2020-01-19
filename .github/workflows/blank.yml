@@ -8,10 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # - name: Install Newman
-    #   run: |
-    #     npm install newman
-    - name: Run Collection
-      uses: postman/newman
-      run: |
-        newman run collections/Google\ Places\ API.postman_collection.json
+      - name: Run Collection
+        uses: postman/newman
+        run: |
+          newman run collections/Google\ Places\ API.postman_collection.json
