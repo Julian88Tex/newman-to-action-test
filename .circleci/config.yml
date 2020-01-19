@@ -1,6 +1,6 @@
 version: 2.1
-orbs:
-  newman: postman/newman@0.0.2
+# orbs:
+#   newman: postman/newman@0.0.2
 # jobs:
 #   newman-collection-run:
 #     executor: newman/postman-newman-docker
@@ -8,8 +8,13 @@ orbs:
 #       - checkout
 #       - newman/newman-run:
 #           collection: ./collections/Google\ Places\ API.postman_collection.json
-steps:
-  - run:
-      command: |
-        newman run collections/Google\ Places\ API.postman_collection.json
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node
+    steps:
+      - run:
+          command: |
+            newman run collections/Google\ Places\ API.postman_collection.json
 
